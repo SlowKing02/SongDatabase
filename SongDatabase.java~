@@ -1,0 +1,43 @@
+/**
+ * Java Program PizzaFrame
+ * Program contains 2 Methods, to create the frame and fill with the panel.
+ * Program is designed to create a frame and execute the pizzapanel.
+ * 
+ * @ Bryson Bonham
+ */
+
+import javax.swing.*;
+import java.util.Scanner;
+public class SongDatabase extends JFrame
+{
+
+    public Project3Frame()
+    {
+        setTitle( "Radio Button Programming Exercise" );
+        setSize( 550, 300 );
+        setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+        JPanel panel = new Project3Panel();
+        this.add( panel );
+    }
+    public static String File = fileName();
+     
+/*
+ * Method exectutes the program
+ */
+    public static void main( String [] args )
+    {        
+        JFrame frame = new Project3Frame();
+        frame.setVisible( true );
+    }
+    
+    public static String fileName() 
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Please enter the location of the file:");
+        String File = new String();
+        File = scan.next(); 
+        return File;
+    }
+}
+       
